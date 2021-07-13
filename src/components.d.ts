@@ -6,56 +6,135 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface FontIcon {
+        "config": any;
+        "icon": string;
+    }
+    interface IntSideDrawer {
+        "open": boolean;
+        "testButton": Array<any>;
+        "titleName": string;
+    }
+    interface IntSidenav {
+    }
+    interface IntelepeerPersonalCard {
+    }
     interface MyComponent {
+        "config": any;
         /**
           * The first name
          */
         "first": string;
+        "icon": string;
         /**
           * The last name
          */
-        "last": string;
+        "logoImage": string;
         /**
           * The middle name
          */
         "middle": string;
     }
+    interface SideItem {
+    }
 }
 declare global {
+    interface HTMLFontIconElement extends Components.FontIcon, HTMLStencilElement {
+    }
+    var HTMLFontIconElement: {
+        prototype: HTMLFontIconElement;
+        new (): HTMLFontIconElement;
+    };
+    interface HTMLIntSideDrawerElement extends Components.IntSideDrawer, HTMLStencilElement {
+    }
+    var HTMLIntSideDrawerElement: {
+        prototype: HTMLIntSideDrawerElement;
+        new (): HTMLIntSideDrawerElement;
+    };
+    interface HTMLIntSidenavElement extends Components.IntSidenav, HTMLStencilElement {
+    }
+    var HTMLIntSidenavElement: {
+        prototype: HTMLIntSidenavElement;
+        new (): HTMLIntSidenavElement;
+    };
+    interface HTMLIntelepeerPersonalCardElement extends Components.IntelepeerPersonalCard, HTMLStencilElement {
+    }
+    var HTMLIntelepeerPersonalCardElement: {
+        prototype: HTMLIntelepeerPersonalCardElement;
+        new (): HTMLIntelepeerPersonalCardElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLSideItemElement extends Components.SideItem, HTMLStencilElement {
+    }
+    var HTMLSideItemElement: {
+        prototype: HTMLSideItemElement;
+        new (): HTMLSideItemElement;
+    };
     interface HTMLElementTagNameMap {
+        "font-icon": HTMLFontIconElement;
+        "int-side-drawer": HTMLIntSideDrawerElement;
+        "int-sidenav": HTMLIntSidenavElement;
+        "intelepeer-personal-card": HTMLIntelepeerPersonalCardElement;
         "my-component": HTMLMyComponentElement;
+        "side-item": HTMLSideItemElement;
     }
 }
 declare namespace LocalJSX {
+    interface FontIcon {
+        "config"?: any;
+        "icon"?: string;
+    }
+    interface IntSideDrawer {
+        "open"?: boolean;
+        "testButton"?: Array<any>;
+        "titleName"?: string;
+    }
+    interface IntSidenav {
+    }
+    interface IntelepeerPersonalCard {
+    }
     interface MyComponent {
+        "config"?: any;
         /**
           * The first name
          */
         "first"?: string;
+        "icon"?: string;
         /**
           * The last name
          */
-        "last"?: string;
+        "logoImage"?: string;
         /**
           * The middle name
          */
         "middle"?: string;
     }
+    interface SideItem {
+    }
     interface IntrinsicElements {
+        "font-icon": FontIcon;
+        "int-side-drawer": IntSideDrawer;
+        "int-sidenav": IntSidenav;
+        "intelepeer-personal-card": IntelepeerPersonalCard;
         "my-component": MyComponent;
+        "side-item": SideItem;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "font-icon": LocalJSX.FontIcon & JSXBase.HTMLAttributes<HTMLFontIconElement>;
+            "int-side-drawer": LocalJSX.IntSideDrawer & JSXBase.HTMLAttributes<HTMLIntSideDrawerElement>;
+            "int-sidenav": LocalJSX.IntSidenav & JSXBase.HTMLAttributes<HTMLIntSidenavElement>;
+            "intelepeer-personal-card": LocalJSX.IntelepeerPersonalCard & JSXBase.HTMLAttributes<HTMLIntelepeerPersonalCardElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "side-item": LocalJSX.SideItem & JSXBase.HTMLAttributes<HTMLSideItemElement>;
         }
     }
 }

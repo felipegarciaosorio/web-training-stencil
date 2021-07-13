@@ -1,0 +1,11 @@
+.side-item {
+    display: block;
+    color: #ababab;
+    cursor: pointer;
+    display: block;
+    height: 48px;
+    -webkit-tap-highlight-color: transparent;
+    width: 100%;
+    padding: 0;
+    padding-top: 8px;
+}

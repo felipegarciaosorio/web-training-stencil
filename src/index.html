@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
     <title>Stencil Component Starter</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+    </style>
 
     <script type="module" src="/build/webtraining-web-components.esm.js"></script>
     <script nomodule src="/build/webtraining-web-components.js"></script>
-  </head>
-  <body>
-    <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
-  </body>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body style="overflow: hidden">
+    <my-component logo-image="assets/images/intelepeer.png"></my-component>
+    <int-sidenav>
+        <side-item>
+            <font-icon icon="fa fa-home"></font-icon>
+        </side-item>
+        <side-item>
+            <font-icon icon="fa fa-calendar-check"></font-icon>
+        </side-item>
+        <side-item>
+            <font-icon icon="fa fa-home"></font-icon>
+        </side-item>
+        <side-item>
+            <font-icon icon="fa fa-home"></font-icon>
+        </side-item>
+    </int-sidenav>
+</body>
+
 </html>

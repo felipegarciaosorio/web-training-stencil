@@ -1,16 +1,18 @@
-import { Component, Prop, h } from '@stencil/core';
-import { format } from '../../utils/utils';
+import { Component, Prop, h, Host } from '@stencil/core';
 
 @Component({
   tag: 'my-component',
-  styleUrl: 'my-component.css',
-  shadow: true,
+  styleUrls: ['my-component.css'],
+  assetsDirs: ['assets'],
+  shadow: false,
 })
 export class MyComponent {
   /**
    * The first name
    */
   @Prop() first: string;
+
+  @Prop() icon: string;
 
   /**
    * The middle name
@@ -20,13 +22,42 @@ export class MyComponent {
   /**
    * The last name
    */
-  @Prop() last: string;
+  @Prop() logoImage: string;
 
-  private getText(): string {
-    return format(this.first, this.middle, this.last);
+  @Prop() config: any;
+
+  componentWillLoad() {
+    // This component will get access
+    // to config if slotted inside root.
+    console.log(this.config);
   }
 
   render() {
-    return <div>Hello, World! I'm {this.getText()}</div>;
+    return [
+    <div class="top">
+      <div class="applogo">
+        <a href="#/home" class="logo">
+            <img src={this.logoImage} alt="Intelepeer" />
+        </a>
+      </div>
+    </div>
+
+    
+
+    
+    ]
   }
+
+  //render() {
+  //  return (
+  //    <Host>
+  //      <slot>
+  //        <i class="fab fa-adobe"></i>
+  //        <i class="far fa-address-card"></i>
+  //        <i class="fas fa-address-card"></i>
+  //        <i class="fas fa-map-marked-alt"></i>
+  //      </slot>
+  //    </Host>
+  //  );
+  //}
 }
