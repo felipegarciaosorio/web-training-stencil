@@ -1,8 +1,8 @@
-import { Component, Prop, h, Host } from '@stencil/core';
+import { Component, Prop, h } from '@stencil/core';
 
 @Component({
-  tag: 'my-component',
-  styleUrls: ['my-component.css'],
+  tag: 'int-navbar',
+  styleUrls: ['int-navbar.css'],
   assetsDirs: ['assets'],
   shadow: false,
 })
